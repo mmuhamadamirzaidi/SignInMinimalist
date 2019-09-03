@@ -11,10 +11,17 @@
 
     //Button
     <color name="colorTransparent">#00000000</color>
+    <color name="disable">#DDDDDD</color>
 
     //Text
     <color name="textColorPrimaryDark">#2c2c2c</color>
     <color name="textColorPrimary">#4b4b4c</color>
     <color name="textColorAccent">#808080</color>
+
+    //Recycler
+    <color name="defaultColor">#f4f4f4</color>
+
+    //Others
+    <color name="white">#ffffff</color>
 
 </resources>
