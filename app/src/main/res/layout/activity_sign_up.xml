@@ -6,12 +6,12 @@
     android:layout_height="match_parent"
     android:background="@color/backgroundApp"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".SignUpActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorPrimaryDark"
         android:orientation="vertical">
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -31,7 +31,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="25dp"
             android:fontFamily="@font/mm"
-            android:text="Welcome Back"
+            android:text="New User Here?"
             android:textColor="@android:color/white"
             android:textSize="25sp" />
 
@@ -42,7 +42,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginBottom="30dp"
             android:fontFamily="@font/mr"
-            android:text="Sign in to continue"
+            android:text="Sign up to continue"
             android:textColor="@android:color/white"
             android:textSize="15sp" />
 
@@ -60,7 +60,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:fontFamily="@font/mm"
-            android:text="EMAIL"
+            android:text="Full Name"
             android:textColor="@color/textColorPrimaryDark"
             android:textSize="15sp" />
 
@@ -70,13 +70,45 @@
             app:hintEnabled="false">
 
             <EditText
+                android:id="@+id/sign_up_fullname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="13dp"
                 android:layout_marginEnd="13dp"
                 android:fontFamily="@font/mr"
-                android:hint="Insert your email address"
+                android:hint="Insert your full name"
                 android:inputType="text"
+                android:textColor="@color/textColorAccent"
+                android:textColorHint="@color/textColorAccent"
+                android:textSize="15sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/mm"
+            android:text="Phone Number"
+            android:textColor="@color/textColorPrimaryDark"
+            android:textSize="15sp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintEnabled="false">
+
+            <EditText
+                android:id="@+id/sign_up_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginEnd="13dp"
+                android:fontFamily="@font/mr"
+                android:inputType="phone"
+                android:hint="Insert your phone number"
                 android:textColor="@color/textColorAccent"
                 android:textColorHint="@color/textColorAccent"
                 android:textSize="15sp" />
@@ -88,10 +120,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="15dp"
             android:layout_marginEnd="16dp"
             android:fontFamily="@font/mm"
-            android:text="PASSWORD"
+            android:text="Password"
             android:textColor="@color/textColorPrimaryDark"
             android:textSize="15sp" />
 
@@ -102,6 +134,7 @@
             app:passwordToggleEnabled="true">
 
             <EditText
+                android:id="@+id/sign_up_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="13dp"
@@ -116,36 +149,9 @@
 
         </android.support.design.widget.TextInputLayout>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="16dp"
-            android:paddingBottom="16dp"
-            android:paddingEnd="16dp"
-            android:paddingStart="16dp">
-
-            <TextView
-                android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mr"
-                android:hint="Remember me!"
-                android:textColor="@color/textColorPrimaryDark"
-                android:textSize="15sp" />
-
-            <CheckBox
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-        </RelativeLayout>
-
 
         <Button
+            android:id="@+id/button_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -153,7 +159,7 @@
             android:layout_marginEnd="16dp"
             android:background="@drawable/bgbtnsignin"
             android:fontFamily="@font/mm"
-            android:text="SIGN IN"
+            android:text="SIGN UP"
             android:textColor="@android:color/white" />
 
     </LinearLayout>
@@ -174,20 +180,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/mr"
-                android:text="Forgot password? "
-                android:textColor="@color/colorPrimary" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/mr"
-                android:text="Don't have an account yet?"
-                android:textColor="@color/textColorAccent" />
+                android:text="Already have an account?"
+                android:textColor="@color/textColorAccent"
+                android:textSize="15sp" />
 
 
         </LinearLayout>
 
         <Button
+            android:id="@+id/button_account_sign_in"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -195,7 +196,7 @@
             android:layout_marginEnd="16dp"
             android:background="@drawable/bgbtncreate"
             android:fontFamily="@font/mm"
-            android:text="SIGN UP NOW!"
+            android:text="SIGN IN NOW!"
             android:textColor="@color/textColorAccent" />
 
     </LinearLayout>
